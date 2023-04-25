@@ -315,9 +315,9 @@ func testStateMgrCurrentLineage(mgr statemgr.Persistent) string {
 // The given mark string is returned verbatim, to allow the following pattern
 // in tests:
 //
-//     mark := markStateForMatching(state, "foo")
-//     // (do stuff to the state)
-//     assertStateHasMarker(state, mark)
+//	mark := markStateForMatching(state, "foo")
+//	// (do stuff to the state)
+//	assertStateHasMarker(state, mark)
 func markStateForMatching(state *states.State, mark string) string {
 	state.RootModule().SetOutputValue("testing_mark", cty.StringVal(mark), false)
 	return mark
@@ -695,10 +695,10 @@ func testInputMap(t *testing.T, answers map[string]string) func() {
 // When using this function, the configuration fixture for the test must
 // include an empty configuration block for the HTTP backend, like this:
 //
-// terraform {
-//   backend "http" {
-//   }
-// }
+//	terraform {
+//	  backend "http" {
+//	  }
+//	}
 //
 // If such a block isn't present, or if it isn't empty, then an error will
 // be returned about the backend configuration having changed and that

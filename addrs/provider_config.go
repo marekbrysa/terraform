@@ -68,11 +68,11 @@ type AbsProviderConfig struct {
 // address. The following are examples of traversals that can be successfully
 // parsed as absolute provider configuration addresses:
 //
-//     provider.aws
-//     provider.aws.foo
-//     module.bar.provider.aws
-//     module.bar.module.baz.provider.aws.foo
-//     module.foo[1].provider.aws.foo
+//	provider.aws
+//	provider.aws.foo
+//	module.bar.provider.aws
+//	module.bar.module.baz.provider.aws.foo
+//	module.foo[1].provider.aws.foo
 //
 // This type of address is used, for example, to record the relationships
 // between resources and provider configurations in the state structure.

@@ -19,19 +19,18 @@ import (
 // The "specifiers" allowed in this is a fairly rich syntax to help
 // describe the format of your configuration:
 //
-//   * Basic keys are just strings. For example: "foo" will match the
-//       "foo" key.
+//   - Basic keys are just strings. For example: "foo" will match the
+//     "foo" key.
 //
-//   * Nested structure keys can be matched by doing
-//       "listener.*.foo". This will verify that there is at least one
-//       listener element that has the "foo" key set.
+//   - Nested structure keys can be matched by doing
+//     "listener.*.foo". This will verify that there is at least one
+//     listener element that has the "foo" key set.
 //
-//   * The existence of a nested structure can be checked by simply
-//       doing "listener.*" which will verify that there is at least
-//       one element in the "listener" structure. This is NOT
-//       validating that "listener" is an array. It is validating
-//       that it is a nested structure in the configuration.
-//
+//   - The existence of a nested structure can be checked by simply
+//     doing "listener.*" which will verify that there is at least
+//     one element in the "listener" structure. This is NOT
+//     validating that "listener" is an array. It is validating
+//     that it is a nested structure in the configuration.
 type Validator struct {
 	Required []string
 	Optional []string

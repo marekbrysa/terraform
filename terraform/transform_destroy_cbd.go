@@ -110,13 +110,13 @@ func (t *ForcedCBDTransformer) hasCBDDescendent(g *Graph, v dag.Vertex) bool {
 // the DestroyEdgeTransformer to have the right dependencies. There are
 // two real tasks here:
 //
-//   1. With CBD, the destroy edge is inverted: the destroy depends on
-//      the creation.
+//  1. With CBD, the destroy edge is inverted: the destroy depends on
+//     the creation.
 //
-//   2. A_d must depend on resources that depend on A. This is to enable
-//      the destroy to only happen once nodes that depend on A successfully
-//      update to A. Example: adding a web server updates the load balancer
-//      before deleting the old web server.
+//  2. A_d must depend on resources that depend on A. This is to enable
+//     the destroy to only happen once nodes that depend on A successfully
+//     update to A. Example: adding a web server updates the load balancer
+//     before deleting the old web server.
 //
 // This transformer requires that a previous transformer has already forced
 // create_before_destroy on for nodes that are depended on by explicit CBD

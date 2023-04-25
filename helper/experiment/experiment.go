@@ -8,31 +8,30 @@
 //
 // To create a new experiment:
 //
-//   1. Add the experiment to the global vars list below, prefixed with X_
+//  1. Add the experiment to the global vars list below, prefixed with X_
 //
-//   2. Add the experiment variable to the All listin the init() function
+//  2. Add the experiment variable to the All listin the init() function
 //
-//   3. Use it!
+//  3. Use it!
 //
 // To remove an experiment:
 //
-//   1. Delete the experiment global var.
+//  1. Delete the experiment global var.
 //
-//   2. Try to compile and fix all the places where the var was referenced.
+//  2. Try to compile and fix all the places where the var was referenced.
 //
 // To use an experiment:
 //
-//   1. Use Flag() if you want the experiment to be available from the CLI.
+//  1. Use Flag() if you want the experiment to be available from the CLI.
 //
-//   2. Use Enabled() to check whether it is enabled.
+//  2. Use Enabled() to check whether it is enabled.
 //
 // As a general user:
 //
-//   1. The `-Xexperiment-name` flag
-//   2. The `TF_X_<experiment-name>` env var.
-//   3. The `TF_X_FORCE` env var can be set to force an experimental feature
-//      without human verifications.
-//
+//  1. The `-Xexperiment-name` flag
+//  2. The `TF_X_<experiment-name>` env var.
+//  3. The `TF_X_FORCE` env var can be set to force an experimental feature
+//     without human verifications.
 package experiment
 
 import (

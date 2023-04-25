@@ -125,7 +125,7 @@ func (l *Loader) IsConfigDir(path string) bool {
 // code from that loader must be imported into the "main" loader in order
 // to return source code snapshots in diagnostic messages.
 //
-//     loader.ImportSources(otherLoader.Sources())
+//	loader.ImportSources(otherLoader.Sources())
 func (l *Loader) ImportSources(sources map[string][]byte) {
 	p := l.Parser()
 	for name, src := range sources {

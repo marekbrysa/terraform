@@ -15,12 +15,11 @@ import (
 //
 // The primary difference between this graph and others:
 //
-//   * Based on the config since it represents the target state
+//   - Based on the config since it represents the target state
 //
-//   * Ignores lifecycle options since no lifecycle events occur here. This
+//   - Ignores lifecycle options since no lifecycle events occur here. This
 //     simplifies the graph significantly since complex transforms such as
 //     create-before-destroy can be completely ignored.
-//
 type PlanGraphBuilder struct {
 	// Config is the configuration tree to build a plan from.
 	Config *configs.Config

@@ -149,7 +149,9 @@ func (s *GRPCProvisionerServer) Stop(_ context.Context, req *proto.Stop_Request)
 }
 
 // FIXME: backported from go1.13 strings package, remove once terraform is
-//        using go >= 1.13
+//
+//	using go >= 1.13
+//
 // ToValidUTF8 returns a copy of the string s with each run of invalid UTF-8 byte sequences
 // replaced by the replacement string, which may be empty.
 func toValidUTF8(s, replacement string) string {

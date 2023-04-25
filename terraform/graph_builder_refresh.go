@@ -16,13 +16,12 @@ import (
 //
 // The primary difference between this graph and others:
 //
-//   * Based on the state since it represents the only resources that
+//   - Based on the state since it represents the only resources that
 //     need to be refreshed.
 //
-//   * Ignores lifecycle options since no lifecycle events occur here. This
+//   - Ignores lifecycle options since no lifecycle events occur here. This
 //     simplifies the graph significantly since complex transforms such as
 //     create-before-destroy can be completely ignored.
-//
 type RefreshGraphBuilder struct {
 	// Config is the configuration tree.
 	Config *configs.Config

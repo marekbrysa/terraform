@@ -70,9 +70,10 @@ func (pt Provider) LegacyString() string {
 // terraform-config-inspect.
 //
 // The following are valid source string formats:
-// 		name
-// 		namespace/name
-// 		hostname/namespace/name
+//
+//	name
+//	namespace/name
+//	hostname/namespace/name
 func ParseProviderSourceString(str string) (Provider, tfdiags.Diagnostics) {
 	var ret Provider
 	var diags tfdiags.Diagnostics

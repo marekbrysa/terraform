@@ -463,7 +463,8 @@ func newEdgeInfo(infoType string, e Edge, info string) *marshalEdgeInfo {
 // graph dot format.
 //
 // TODO: Allow returning the output at a certain point during decode.
-//       Encode extra information from the json log into the Dot.
+//
+//	Encode extra information from the json log into the Dot.
 func JSON2Dot(r io.Reader) ([]byte, error) {
 	g, err := decodeGraph(r)
 	if err != nil {

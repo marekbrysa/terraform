@@ -69,7 +69,8 @@ func (c *Changes) ResourceInstanceDeposed(addr addrs.AbsResourceInstance, key st
 }
 
 // OutputValue returns the planned change for the output value with the
-//  given address, if any. Returns nil if no change is planned.
+//
+//	given address, if any. Returns nil if no change is planned.
 func (c *Changes) OutputValue(addr addrs.AbsOutputValue) *OutputChangeSrc {
 	addrStr := addr.String()
 	for _, oc := range c.Outputs {
@@ -155,12 +156,12 @@ func (rc *ResourceInstanceChange) Encode(ty cty.Type) (*ResourceInstanceChangeSr
 //
 // The following table shows the simplification behavior:
 //
-//     Action    Destroying?   New Action
-//     --------+-------------+-----------
-//     Create    true          NoOp
-//     Delete    false         NoOp
-//     Replace   true          Delete
-//     Replace   false         Create
+//	Action    Destroying?   New Action
+//	--------+-------------+-----------
+//	Create    true          NoOp
+//	Delete    false         NoOp
+//	Replace   true          Delete
+//	Replace   false         Create
 //
 // For any combination not in the above table, the Simplify just returns the
 // receiver as-is.

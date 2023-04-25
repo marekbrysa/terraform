@@ -370,7 +370,8 @@ func (g *Graph) DebugVisitInfo(v Vertex, info string) {
 //
 // The returned func's End method allows this method to be called from a single
 // defer statement:
-//     defer g.DebugOperationBegin("OpName", "operating").End("")
+//
+//	defer g.DebugOperationBegin("OpName", "operating").End("")
 //
 // The returned function must be called to properly close the logical operation
 // in the logs.

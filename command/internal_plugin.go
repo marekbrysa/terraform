@@ -20,7 +20,7 @@ const TFSPACE = "-TFSPACE-"
 // BuildPluginCommandString builds a special string for executing internal
 // plugins. It has the following format:
 //
-// 	/path/to/terraform-TFSPACE-internal-plugin-TFSPACE-terraform-provider-aws
+//	/path/to/terraform-TFSPACE-internal-plugin-TFSPACE-terraform-provider-aws
 //
 // We split the string on -TFSPACE- to build the command executor. The reason we
 // use -TFSPACE- is so we can support spaces in the /path/to/terraform part.

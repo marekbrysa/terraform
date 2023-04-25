@@ -68,10 +68,10 @@ type plugin struct {
 
 // makeProviderMap creates a map of providers like this:
 //
-// var InternalProviders = map[string]plugin.ProviderFunc{
-// 	"aws":        aws.Provider,
-// 	"azurerm":    azurerm.Provider,
-// 	"cloudflare": cloudflare.Provider,
+//	var InternalProviders = map[string]plugin.ProviderFunc{
+//		"aws":        aws.Provider,
+//		"azurerm":    azurerm.Provider,
+//		"cloudflare": cloudflare.Provider,
 func makeProviderMap(items []plugin) string {
 	output := ""
 	for _, item := range items {
@@ -87,7 +87,6 @@ func makeProviderMap(items []plugin) string {
 //	"file":            fileprovisioner.Provisioner,
 //	"local-exec":      localexecprovisioner.Provisioner,
 //	"remote-exec":     remoteexecprovisioner.Provisioner,
-//
 func makeProvisionerMap(items []plugin) string {
 	output := ""
 	for _, item := range items {

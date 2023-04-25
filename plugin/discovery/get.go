@@ -94,10 +94,10 @@ type ProviderInstaller struct {
 // This method may return one of a number of sentinel errors from this
 // package to indicate issues that are likely to be resolvable via user action:
 //
-//     ErrorNoSuchProvider: no provider with the given name exists in the repository.
-//     ErrorNoSuitableVersion: the provider exists but no available version matches constraints.
-//     ErrorNoVersionCompatible: a plugin was found within the constraints but it is
-//                               incompatible with the current Terraform version.
+//	ErrorNoSuchProvider: no provider with the given name exists in the repository.
+//	ErrorNoSuitableVersion: the provider exists but no available version matches constraints.
+//	ErrorNoVersionCompatible: a plugin was found within the constraints but it is
+//	                          incompatible with the current Terraform version.
 //
 // These errors should be recognized and handled as special cases by the caller
 // to present a suitable user-oriented error message.

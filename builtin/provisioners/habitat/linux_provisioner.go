@@ -252,9 +252,7 @@ func (p *provisioner) linuxUploadCtlSecret(o terraform.UIOutput, comm communicat
 	return comm.Upload(destination, keyContent)
 }
 
-//
 // Habitat Services
-//
 func (p *provisioner) linuxStartHabitatService(o terraform.UIOutput, comm communicator.Communicator, service Service) error {
 	var options string
 

@@ -27,17 +27,17 @@ type Diagnostics []Diagnostic
 //
 // The usual pattern for a function that natively "speaks" diagnostics is:
 //
-//     // Create a nil Diagnostics at the start of the function
-//     var diags diag.Diagnostics
+//	// Create a nil Diagnostics at the start of the function
+//	var diags diag.Diagnostics
 //
-//     // At later points, build on it if errors / warnings occur:
-//     foo, err := DoSomethingRisky()
-//     if err != nil {
-//         diags = diags.Append(err)
-//     }
+//	// At later points, build on it if errors / warnings occur:
+//	foo, err := DoSomethingRisky()
+//	if err != nil {
+//	    diags = diags.Append(err)
+//	}
 //
-//     // Eventually return the result and diagnostics in place of error
-//     return result, diags
+//	// Eventually return the result and diagnostics in place of error
+//	return result, diags
 //
 // Append accepts a variety of different diagnostic-like types, including
 // native Go errors and HCL diagnostics. It also knows how to unwrap
@@ -133,7 +133,7 @@ func (diags Diagnostics) ForRPC() Diagnostics {
 // that aren't accompanied by at least one error) since such APIs have no
 // mechanism through which to report these.
 //
-//     return result, diags.Error()
+//	return result, diags.Error()
 func (diags Diagnostics) Err() error {
 	if !diags.HasErrors() {
 		return nil

@@ -261,8 +261,8 @@ func (c *stateClient) http() (*retryablehttp.Client, error) {
 // Here we detect and handle this situation by ticking the serial and retrying
 // iff for the previous state and the proposed state:
 //
-//   * the serials match
-//   * the parsed states are Equal (semantically equivalent)
+//   - the serials match
+//   - the parsed states are Equal (semantically equivalent)
 //
 // In other words, in this situation Terraform can override Atlas's detected
 // conflict by asserting that the state it is pushing is indeed correct.

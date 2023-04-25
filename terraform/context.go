@@ -426,9 +426,10 @@ func (c *Context) Eval(path addrs.ModuleInstance) (*lang.Scope, tfdiags.Diagnost
 // Context.State, rather than rely on the return value.
 //
 // TODO: Apply and Refresh should either always return a state, or rely on the
-//       State() method. Currently the helper/resource testing framework relies
-//       on the absence of a returned state to determine if Destroy can be
-//       called, so that will need to be refactored before this can be changed.
+//
+//	State() method. Currently the helper/resource testing framework relies
+//	on the absence of a returned state to determine if Destroy can be
+//	called, so that will need to be refactored before this can be changed.
 func (c *Context) Apply() (*states.State, tfdiags.Diagnostics) {
 	defer c.acquireRun("apply")()
 

@@ -484,7 +484,8 @@ resource "test_resource" "foo" {
 // Reproduces plan-time panic when the wrong type is interpolated in a list of
 // maps.
 // TODO: this should return a type error, rather than silently setting an empty
-//       list
+//
+//	list
 func TestResource_dataSourceListMapPanic(t *testing.T) {
 	resource.UnitTest(t, resource.TestCase{
 		Providers:    testAccProviders,
